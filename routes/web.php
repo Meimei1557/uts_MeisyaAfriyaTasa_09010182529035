@@ -11,5 +11,6 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [BookController::class, 'dashboard'])->name('dashboard');
+    Route::get('/books-export', [BookController::class, 'export'])->name('books.export');
     Route::resource('books', BookController::class);
 });
