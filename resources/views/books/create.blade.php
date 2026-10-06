@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('title','Tambah Buku') @section('content')<div class="card"><h1>Tambah Buku</h1><p class="muted">Masukkan data buku baru.</p><form method="POST" action="{{route('books.store')}}">@csrf @include('books.form')<button class="btn primary">Simpan Buku</button> <a class="btn secondary" href="{{route('books.index')}}">Batal</a></form></div>@endsection
